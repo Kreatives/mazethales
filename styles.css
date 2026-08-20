@@ -334,6 +334,9 @@ button { font-family: inherit; cursor: pointer; }
 /* =========================================================
    Header
    ========================================================= */
+/* Slot lost op als box zodat de sticky header t.o.v. de hele pagina plakt
+   (niet alleen binnen het kleine slot-blokje) */
+#site-header-slot { display: contents; }
 /* Subpagina's: solide sticky header in de flow */
 .site-header {
   position: sticky;
@@ -944,22 +947,20 @@ button { font-family: inherit; cursor: pointer; }
 .contact-card:hover { transform: translateY(-2px); }
 .contact-card__body { display: flex; flex-direction: column; }
 .contact-card__label {
-  font-family: var(--ff-mono);
+  font-family: var(--ff-body);
   font-size: var(--text-xs);
-  letter-spacing: 0.05em;
+  font-weight: 600;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
   color: var(--gold);
 }
 .contact-card__value {
-  font-family: var(--ff-base);
-  font-weight: 600;
-  font-size: 1rem;
+  font-family: var(--ff-body);
+  font-weight: 500;
+  font-size: 1.0625rem;
   color: var(--white);
   margin-top: 4px;
   overflow-wrap: anywhere;
-}
-@media (max-width: 768px) {
-  .contact-card__value { font-size: 0.9rem; }
 }
 
 .faq__list { display: flex; flex-direction: column; gap: 16px; }
@@ -1352,7 +1353,7 @@ button { font-family: inherit; cursor: pointer; }
 /* =========================================================
    Vergelijkingstabel
    ========================================================= */
-.compare { width: 100%; overflow-x: auto; }
+.compare { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
 .compare table { width: 100%; border-collapse: collapse; min-width: 720px; }
 .compare th, .compare td {
   text-align: left;
@@ -1360,6 +1361,7 @@ button { font-family: inherit; cursor: pointer; }
   border-bottom: 1px solid var(--line-dark);
   font-size: var(--text-sm);
 }
+.compare tbody td { white-space: nowrap; }
 .compare thead th {
   font-family: var(--ff-base);
   font-weight: 600;
@@ -1401,16 +1403,17 @@ button { font-family: inherit; cursor: pointer; }
   }
   .price-toggle__btn.is-active { background: var(--gold-grad); color: var(--ink); }
 
-  .compare { overflow: visible; }
-  .compare table { min-width: 0; }
-  .compare thead { display: none; }
-  .compare th, .compare td { padding: 16px 6px; }
-  .compare .c-6, .compare .c-12, .compare .c-losse { display: none; }
-  .compare[data-plan="c-6"] .c-6,
-  .compare[data-plan="c-12"] .c-12,
-  .compare[data-plan="c-losse"] .c-losse { display: table-cell; }
-  .compare tbody th { width: 62%; }
-  .compare tbody td { text-align: right; vertical-align: middle; }
+  /* Alleen de tarieven-tabel (met toggle) krijgt de één-koloms weergave */
+  #priceTable.compare { overflow: visible; }
+  #priceTable.compare table { min-width: 0; }
+  #priceTable.compare thead { display: none; }
+  #priceTable.compare th, #priceTable.compare td { padding: 16px 6px; }
+  #priceTable.compare .c-6, #priceTable.compare .c-12, #priceTable.compare .c-losse { display: none; }
+  #priceTable.compare[data-plan="c-6"] .c-6,
+  #priceTable.compare[data-plan="c-12"] .c-12,
+  #priceTable.compare[data-plan="c-losse"] .c-losse { display: table-cell; }
+  #priceTable.compare tbody th { width: 62%; }
+  #priceTable.compare tbody td { text-align: right; vertical-align: middle; }
 }
 
 /* =========================================================
@@ -1620,8 +1623,8 @@ button { font-family: inherit; cursor: pointer; }
   padding: 18px 22px; border-radius: 14px;
 }
 .contact-block__body { display: flex; flex-direction: column; gap: 4px; }
-.contact-block__label { font-family: var(--ff-mono); font-size: var(--text-xs); letter-spacing: 0.05em; text-transform: uppercase; color: var(--gold); }
-.contact-block__value { font-family: var(--ff-wide); font-weight: 500; font-size: 1.125rem; color: var(--white); margin-top: 4px; }
+.contact-block__label { font-family: var(--ff-body); font-weight: 600; font-size: var(--text-xs); letter-spacing: 0.04em; text-transform: uppercase; color: var(--gold); }
+.contact-block__value { font-family: var(--ff-body); font-weight: 500; font-size: 1.0625rem; color: var(--white); margin-top: 4px; overflow-wrap: anywhere; }
 
 .map-embed { border-radius: var(--radius-lg); overflow: hidden; aspect-ratio: 16 / 7; background: #1c1c1c; border: 1px solid var(--line-dark); }
 .map-embed iframe { width: 100%; height: 100%; border: 0; filter: grayscale(0.3) contrast(1.05); }
@@ -1641,8 +1644,8 @@ button { font-family: inherit; cursor: pointer; }
 .address-card:hover { border-color: var(--gold); transform: translateY(-2px); }
 .address-card .icon-tile { width: 46px; height: 46px; }
 .address-card__body { display: flex; flex-direction: column; gap: 2px; }
-.address-card__label { font-family: var(--ff-mono); font-size: var(--text-xs); text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-on-dark-muted); }
-.address-card__value { font-weight: 600; letter-spacing: -0.02em; }
+.address-card__label { font-family: var(--ff-body); font-weight: 600; font-size: var(--text-xs); text-transform: uppercase; letter-spacing: 0.04em; color: var(--text-on-dark-muted); }
+.address-card__value { font-family: var(--ff-body); font-weight: 500; font-size: 1.0625rem; }
 .address-card__route { margin-left: 18px; color: var(--gold); font-weight: 600; white-space: nowrap; }
 @media (max-width: 520px) {
   .address-card { display: flex; }
@@ -1755,7 +1758,8 @@ button { font-family: inherit; cursor: pointer; }
   .team-card__role { font-size: 0.85rem; }
   .review-card { flex-basis: 100%; }
   .hero { padding-top: 40px; }
-  .hero__title { font-size: clamp(1.05rem, 0.8rem + 2vw, 1.7rem); letter-spacing: -0.03em; }
+  .hero__title { font-size: clamp(1.25rem, 0.85rem + 2.6vw, 1.95rem); letter-spacing: -0.03em; text-wrap: balance; }
+  .hero__content { padding-left: 14px; padding-right: 14px; }
   .hero__stats { flex-wrap: wrap; gap: 24px 32px; }
   .cta__checks { flex-direction: column; align-items: flex-start; }
   .site-footer__top { grid-template-columns: 1fr; gap: 32px; }
