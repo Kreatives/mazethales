@@ -161,7 +161,12 @@
   const headerSlot = document.getElementById("site-header-slot");
   const footerSlot = document.getElementById("site-footer-slot");
 
-  if (headerSlot && !bare) headerSlot.innerHTML = topbar + header;
+  // Header als directe body-child plaatsen (niet in een wrapper-div), zodat
+  // position: sticky t.o.v. de hele pagina werkt (ook in Safari op iPhone)
+  if (headerSlot && !bare) {
+    headerSlot.insertAdjacentHTML("beforebegin", topbar + header);
+    headerSlot.remove();
+  }
   if (footerSlot) footerSlot.innerHTML = footer;
   document.body.insertAdjacentHTML("beforeend", contactWidget);
 

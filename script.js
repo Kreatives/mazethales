@@ -216,14 +216,15 @@
     render();
   }
 
-  /* ---------- Prijs-toggle (tarieven, mobiel) ---------- */
-  const priceToggle = document.getElementById("priceToggle");
-  const priceTable = document.getElementById("priceTable");
-  if (priceToggle && priceTable) {
-    const btns = Array.from(priceToggle.querySelectorAll(".price-toggle__btn"));
+  /* ---------- Toggles die een tabelkolom tonen (tarieven + vergelijking) ---------- */
+  const wireColumnToggle = (toggleId, tableId, attr) => {
+    const toggle = document.getElementById(toggleId);
+    const table = document.getElementById(tableId);
+    if (!toggle || !table) return;
+    const btns = Array.from(toggle.querySelectorAll(".price-toggle__btn"));
     btns.forEach((btn) =>
       btn.addEventListener("click", () => {
-        priceTable.dataset.plan = btn.dataset.plan;
+        table.dataset[attr] = btn.dataset[attr];
         btns.forEach((b) => {
           const on = b === btn;
           b.classList.toggle("is-active", on);
@@ -231,7 +232,9 @@
         });
       })
     );
-  }
+  };
+  wireColumnToggle("priceToggle", "priceTable", "plan");
+  wireColumnToggle("compareToggle", "compareTable", "col");
 
   /* ---------- Media-carousel (galerij) ---------- */
   const mcTrack = document.getElementById("mcTrack");

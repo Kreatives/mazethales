@@ -334,9 +334,6 @@ button { font-family: inherit; cursor: pointer; }
 /* =========================================================
    Header
    ========================================================= */
-/* Slot lost op als box zodat de sticky header t.o.v. de hele pagina plakt
-   (niet alleen binnen het kleine slot-blokje) */
-#site-header-slot { display: contents; }
 /* Subpagina's: solide sticky header in de flow */
 .site-header {
   position: sticky;
@@ -1817,6 +1814,19 @@ button { font-family: inherit; cursor: pointer; }
   .pricing--toggle .price-card.is-active { display: block; }
   .price-toggle--dienst { display: grid; grid-template-columns: repeat(auto-fit, minmax(72px, 1fr)); margin-bottom: 20px; }
   .price-toggle--dienst .price-toggle__btn { font-size: 0.78rem; padding: 10px 4px; }
+
+  /* Vergelijkingstabel: toggle toont één vorm-kolom tegelijk */
+  #compareTable.compare { overflow: visible; }
+  #compareTable.compare table { min-width: 0; }
+  #compareTable.compare thead { display: none; }
+  #compareTable.compare th, #compareTable.compare td { padding: 15px 6px; }
+  #compareTable.compare .c-pt, #compareTable.compare .c-sg, #compareTable.compare .c-duo, #compareTable.compare .c-ah { display: none; }
+  #compareTable.compare[data-col="c-pt"] .c-pt,
+  #compareTable.compare[data-col="c-sg"] .c-sg,
+  #compareTable.compare[data-col="c-duo"] .c-duo,
+  #compareTable.compare[data-col="c-ah"] .c-ah { display: table-cell; }
+  #compareTable.compare tbody th { width: 60%; }
+  #compareTable.compare tbody td { text-align: right; }
 }
 
 @media (max-width: 520px) {

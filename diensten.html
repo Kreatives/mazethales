@@ -124,18 +124,24 @@
           <p class="eyebrow eyebrow--pill">Vergelijken</p>
           <h2 class="section-title section-title--center">Het verschil in harde feiten</h2>
         </div>
-        <div class="compare glass glass--pad">
+        <div class="price-toggle price-toggle--dienst" id="compareToggle" role="tablist" aria-label="Kies een vorm">
+          <button class="price-toggle__btn is-active" type="button" data-col="c-pt">Personal</button>
+          <button class="price-toggle__btn" type="button" data-col="c-sg">Small Group</button>
+          <button class="price-toggle__btn" type="button" data-col="c-duo">Duo</button>
+          <button class="price-toggle__btn" type="button" data-col="c-ah">Aan huis</button>
+        </div>
+        <div class="compare glass glass--pad" id="compareTable" data-col="c-pt">
           <table>
             <thead>
-              <tr><th>Kenmerk</th><th>Personal</th><th>Small Group</th><th>Duo</th><th>Aan huis</th></tr>
+              <tr><th class="c-label">Kenmerk</th><th class="c-pt">Personal</th><th class="c-sg">Small Group</th><th class="c-duo">Duo</th><th class="c-ah">Aan huis</th></tr>
             </thead>
             <tbody>
-              <tr><th>Aantal deelnemers</th><td>1</td><td>Max 6</td><td>2</td><td>1</td></tr>
-              <tr><th>Locatie</th><td>Studio</td><td>Studio</td><td>Studio</td><td>Bij jou thuis</td></tr>
-              <tr><th>Duur per sessie</th><td>60 min</td><td>60 min</td><td>60 min</td><td>60 min</td></tr>
-              <tr><th>Voedingsadvies mogelijk</th><td>Ja</td><td>Ja</td><td>Ja</td><td>Ja</td></tr>
-              <tr><th>Metingen elke 8 weken</th><td>Ja</td><td>Ja</td><td>Ja</td><td>Ja</td></tr>
-              <tr><th>Prijs vanaf</th><td>€ 220 /4 wk</td><td>€ 90 /4 wk</td><td>€ 120 /4 wk p.p.</td><td>€ 300 /4 wk</td></tr>
+              <tr><th class="c-label">Aantal deelnemers</th><td class="c-pt">1</td><td class="c-sg">Max 6</td><td class="c-duo">2</td><td class="c-ah">1</td></tr>
+              <tr><th class="c-label">Locatie</th><td class="c-pt">Studio</td><td class="c-sg">Studio</td><td class="c-duo">Studio</td><td class="c-ah">Bij jou thuis</td></tr>
+              <tr><th class="c-label">Duur per sessie</th><td class="c-pt">60 min</td><td class="c-sg">60 min</td><td class="c-duo">60 min</td><td class="c-ah">60 min</td></tr>
+              <tr><th class="c-label">Voedingsadvies mogelijk</th><td class="c-pt">Ja</td><td class="c-sg">Ja</td><td class="c-duo">Ja</td><td class="c-ah">Ja</td></tr>
+              <tr><th class="c-label">Metingen elke 8 weken</th><td class="c-pt">Ja</td><td class="c-sg">Ja</td><td class="c-duo">Ja</td><td class="c-ah">Ja</td></tr>
+              <tr><th class="c-label">Prijs vanaf</th><td class="c-pt">€ 220 /4 wk</td><td class="c-sg">€ 90 /4 wk</td><td class="c-duo">€ 120 /4 wk p.p.</td><td class="c-ah">€ 300 /4 wk</td></tr>
             </tbody>
           </table>
         </div>
