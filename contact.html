@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact — Maze Thales in Spijkenisse</title>
+  <meta name="description" content="Bel, app of mail Maze Thales in Spijkenisse. Bekijk het adres, de route en de parkeergelegenheid. Trainen gaat op afspraak." />
+  <link rel="stylesheet" href="https://use.typekit.net/hkj4cls.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Preloader (moet in de head laden, vóór de body-inhoud) -->
+  <script src="assets/preloader.js"></script>
+</head>
+<body data-page="contact">
+  <a class="skip-link" href="#main">Direct naar de inhoud</a>
+  <div id="site-header-slot"></div>
+
+  <main id="main">
+    <section class="page-hero" aria-label="Contact">
+      <div class="container">
+        <div class="page-hero__inner">
+          <p class="eyebrow eyebrow--pill">Contact</p>
+          <h1 class="page-hero__title">Even contact opnemen</h1>
+          <p class="page-hero__lead">Bel of app ons voor een snelle vraag, of laat je gegevens achter, dan bellen we je terug. We reageren doorgaans binnen één werkdag.</p>
+        </div>
+      </div>
+    </section>
+
+    <nav class="breadcrumb" aria-label="Kruimelpad">
+      <div class="container"><ol><li><a href="index.html">Home</a></li><li aria-current="page">Contact</li></ol></div>
+    </nav>
+
+    <section class="section" aria-label="Contactgegevens en formulier">
+      <div class="container">
+        <div class="faq__grid">
+          <div>
+            <div class="section-head--left">
+              <p class="eyebrow">Direct contact</p>
+              <h2 class="section-title">Bereik ons direct</h2>
+            </div>
+            <div class="contact-blocks u-mt-32">
+              <a class="contact-block glass" href="tel:+31644992737">
+                <img class="tile-icon" src="assets/icons/telefoon.svg" alt="" aria-hidden="true" />
+                <span class="contact-block__body"><span class="contact-block__label">Telefoon</span><span class="contact-block__value">06 44 99 27 37</span></span>
+              </a>
+              <a class="contact-block glass" href="https://wa.me/31644992737">
+                <img class="tile-icon" src="assets/icons/whatsapp.svg" alt="" aria-hidden="true" />
+                <span class="contact-block__body"><span class="contact-block__label">WhatsApp</span><span class="contact-block__value">Stuur een bericht</span></span>
+              </a>
+              <a class="contact-block glass" href="mailto:mazethalesfs@gmail.com">
+                <img class="tile-icon" src="assets/icons/email.svg" alt="" aria-hidden="true" />
+                <span class="contact-block__body"><span class="contact-block__label">E-mail</span><span class="contact-block__value">mazethalesfs@gmail.com</span></span>
+              </a>
+            </div>
+            <p class="body-text">Trainen gaat op afspraak. We plannen samen vaste momenten die in je week passen, van vroeg in de ochtend tot in de avond.</p>
+          </div>
+
+          <div class="glass glass--pad">
+            <h2 class="section-title u-mt-0">Laat je gegevens achter</h2>
+            <p class="body-text">Vul kort in wie je bent en waar je vraag over gaat, dan nemen we contact met je op.</p>
+            <form class="form u-mt-16" name="contact" method="post" action="bedankt.html">
+              <div class="form__row"><label for="c-naam">Naam</label><input id="c-naam" name="naam" type="text" required autocomplete="name" placeholder="Je naam" /></div>
+              <div class="form__row"><label for="c-contact">Telefoon of e-mail</label><input id="c-contact" name="contact" type="text" required placeholder="Waarop we je kunnen bereiken" /></div>
+              <div class="form__row"><label for="c-bericht">Je bericht</label><textarea id="c-bericht" name="bericht" placeholder="Waar kunnen we je mee helpen?"></textarea></div>
+              <button class="btn btn--gold btn--lg" type="submit">Verstuur bericht</button>
+              <p class="form__hint">We gebruiken je gegevens alleen om te reageren. Zie de privacyverklaring.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Locatie -->
+    <section class="section section--dark" aria-label="Locatie">
+      <div class="container">
+        <div class="section-head section-head--left">
+          <p class="eyebrow">Locatie</p>
+          <h2 class="section-title">Waar je ons vindt</h2>
+          <p class="body-text">De studio zit aan de Eikenlaan in Spijkenisse met parkeergelegenheid voor de deur. Kom je met het openbaar vervoer, dan is de studio op loopafstand van de dichtstbijzijnde halte.</p>
+        </div>
+        <a class="address-card" href="https://www.google.com/maps/search/?api=1&query=Eikenlaan+102+3203+BM+Spijkenisse" target="_blank" rel="noopener">
+          <span class="icon-tile" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg></span>
+          <span class="address-card__body">
+            <span class="address-card__label">Adres</span>
+            <span class="address-card__value">Eikenlaan 102, 3203 BM Spijkenisse</span>
+          </span>
+          <span class="address-card__route">Route</span>
+        </a>
+        <div class="map-embed" style="margin-top: clamp(40px, 6vw, 72px);">
+          <iframe title="Kaart van Maze Thales, Eikenlaan 102 Spijkenisse" loading="lazy" src="https://maps.google.com/maps?q=Eikenlaan+102+3203+BM+Spijkenisse&z=15&output=embed"></iframe>
+        </div>
+        <div class="split u-mt-32">
+          <div class="split__media"><img src="assets/entree.jpg" alt="De entree van de studio" loading="lazy" /></div>
+          <div class="section-head--left">
+            <h3 class="feature-card__title u-mt-0">Bij de entree</h3>
+            <p class="body-text">Zo ziet de ingang eruit, zodat je bij je eerste bezoek meteen weet waar je naar binnen gaat. Aanbellen is genoeg, dan doen we open.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer-slot"></div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/SplitText.min.js"></script>
+  <script src="assets/partials.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

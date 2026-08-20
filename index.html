@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Maze Thales — Personal training in Spijkenisse</title>
+  <meta name="description" content="Personal training in Spijkenisse, altijd onder begeleiding. Begin met een gratis intake waarin we je doel, je niveau en je agenda doornemen." />
+
+  <!-- Adobe Fonts (Roc Grotesk) -->
+  <link rel="stylesheet" href="https://use.typekit.net/hkj4cls.css" />
+  <!-- Google Fonts (Inter, DM Mono) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Preloader (moet in de head laden, vóór de body-inhoud) -->
+  <script src="assets/preloader.js"></script>
+</head>
+<body class="home" data-page="home">
+  <a class="skip-link" href="#main">Direct naar de inhoud</a>
+
+  <div id="site-header-slot"></div>
+
+  <main id="main">
+
+    <!-- Hero -->
+    <section class="hero" aria-label="Introductie">
+      <div class="hero__media">
+        <video class="hero__video" autoplay muted loop playsinline preload="metadata" poster="assets/hero-poster.jpg" aria-hidden="true">
+          <source src="assets/hero.webm" type="video/webm" />
+          <source src="assets/hero.mp4" type="video/mp4" />
+        </video>
+      </div>
+
+      <div class="hero__content">
+        <div class="review-badge">
+          <div class="review-badge__avatars" aria-hidden="true">
+            <span class="avatar"></span>
+            <span class="avatar"></span>
+            <span class="avatar"></span>
+            <span class="avatar"></span>
+          </div>
+          <div class="review-badge__meta">
+            <div class="stars" role="img" aria-label="5 uit 5 sterren">
+              <span></span><span></span><span></span><span></span><span></span>
+            </div>
+            <p class="review-badge__label">Gebaseerd op 432+ reviews</p>
+          </div>
+        </div>
+
+        <h1 class="hero__title">Personal training in Spijkenisse, altijd onder begeleiding.</h1>
+
+        <p class="hero__text">Je begint met een gratis intake waarin we je doel, je niveau en je agenda doornemen. Daarna train je één op één, met z'n tweeën of in een groep van maximaal zes.</p>
+
+        <a class="btn btn--gold btn--lg" href="gratis-intake.html">Plan gratis intake</a>
+      </div>
+
+      <div class="hero__stats">
+        <div class="stat">
+          <span class="stat__value" data-count="4.9" data-decimals="1">4.9</span>
+          <span class="stat__label">Google-score</span>
+        </div>
+        <span class="stat__divider" aria-hidden="true"></span>
+        <div class="stat">
+          <span class="stat__value" data-count="245" data-suffix="+">245+</span>
+          <span class="stat__label">Klanten begeleid</span>
+        </div>
+        <span class="stat__divider" aria-hidden="true"></span>
+        <div class="stat">
+          <span class="stat__value" data-count="5" data-suffix="+">5+</span>
+          <span class="stat__label">Jaar ervaring</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- USP cards -->
+    <section class="usp section" aria-label="Onze aanpak in het kort">
+      <div class="container">
+        <div class="usp__grid">
+          <article class="feature-card">
+            <img class="tile-icon" src="assets/icons/maximaal-zes.svg" alt="" aria-hidden="true" />
+            <h3 class="feature-card__title">Maximaal zes per training</h3>
+            <p class="feature-card__text">Zelfs in de groep krijg je techniekcorrectie.</p>
+          </article>
+
+          <article class="feature-card">
+            <img class="tile-icon" src="assets/icons/trainer-bij.svg" alt="" aria-hidden="true" />
+            <h3 class="feature-card__title">Altijd een trainer erbij</h3>
+            <p class="feature-card__text">Je traint hier nooit onbegeleid, ook niet op een rustige ochtend.</p>
+          </article>
+
+          <article class="feature-card">
+            <img class="tile-icon" src="assets/icons/meetmomenten.svg" alt="" aria-hidden="true" />
+            <h3 class="feature-card__title">Vaste meetmomenten</h3>
+            <p class="feature-card__text">Je ziet elke acht weken zwart op wit wat er veranderd is.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Wie wij helpen -->
+    <section class="who section" id="over" aria-label="Wie wij helpen">
+      <div class="container who__grid">
+        <div class="who__text">
+          <p class="eyebrow">Wie wij helpen</p>
+          <h2 class="section-title">De meeste mensen die hier binnenlopen zijn al eens eerder begonnen.</h2>
+          <p class="body-text">Ze namen een abonnement, gingen de eerste weken trouw, en merkten daarna dat ze in de zaal stonden zonder te weten wat ze eigenlijk aan het doen waren. Na een maand of twee werd het één keer overslaan, en daarna nog een keer.</p>
+        </div>
+        <div class="who__media">
+          <!-- Vervang met assets/who.jpg -->
+          <img src="assets/who.jpg" alt="Trainer buiten bij de studio" loading="lazy" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Onze aanpak -->
+    <section class="approach section" aria-label="Onze aanpak">
+      <div class="container">
+        <div class="section-head section-head--center">
+          <p class="eyebrow eyebrow--pill">Onze aanpak</p>
+          <h2 class="section-title section-title--center">Hoe een traject bij ons verloopt.</h2>
+        </div>
+
+        <div class="coverflow" id="coverflow" aria-roledescription="carousel" aria-label="Onze aanpak in stappen">
+          <div class="coverflow__stage" id="cfStage">
+            <article class="step-card cf-card">
+              <span class="cf-num" aria-hidden="true">01</span>
+              <img class="tile-icon" src="assets/icons/contact.svg" alt="" aria-hidden="true" />
+              <div class="cf-body">
+                <h3 class="cf-title">De intake</h3>
+                <p class="body-text">In een half uur nemen we je doel, je blessures en je agenda door en meten we je uitgangspunt. Zo weten we waar we beginnen en houden we later iets om mee te vergelijken.</p>
+              </div>
+            </article>
+
+            <article class="step-card cf-card">
+              <span class="cf-num" aria-hidden="true">02</span>
+              <img class="tile-icon" src="assets/icons/schema.svg" alt="" aria-hidden="true" />
+              <div class="cf-body">
+                <h3 class="cf-title">Je plan</h3>
+                <p class="body-text">Op basis van de intake stellen we een schema op dat bij je niveau past. Als je vraagt om voedingsadvies of leefstijlbegeleiding nemen we dat hierin mee.</p>
+              </div>
+            </article>
+
+            <article class="step-card cf-card">
+              <span class="cf-num" aria-hidden="true">03</span>
+              <img class="tile-icon" src="assets/icons/trainer-bij.svg" alt="" aria-hidden="true" />
+              <div class="cf-body">
+                <h3 class="cf-title">Wekelijkse begeleiding</h3>
+                <p class="body-text">Je traint op vaste momenten met een trainer erbij die je techniek corrigeert en je schema bijstelt. Elke acht weken meten we opnieuw en bespreken we of het plan nog klopt.</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="coverflow__nav">
+            <button class="cf-arrow" id="cfPrev" type="button" aria-label="Vorige stap"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg></button>
+            <div class="cf-dots" id="cfDots" role="tablist" aria-label="Stap kiezen"></div>
+            <button class="cf-arrow" id="cfNext" type="button" aria-label="Volgende stap"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+          </div>
+        </div>
+
+        <div class="approach__footer">
+          <p class="body-text body-text--center">Ze namen een abonnement, gingen de eerste weken trouw, en merkten daarna dat ze in de zaal stonden zonder te weten wat ze eigenlijk aan het doen waren. Na een maand of twee werd het één keer overslaan, en daarna nog een keer.</p>
+          <a class="btn btn--gold btn--lg" href="gratis-intake.html">Plan gratis intake</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ons aanbod -->
+    <section class="offer section section--light" id="aanbod" aria-label="Ons aanbod">
+      <div class="container">
+        <div class="section-head section-head--center">
+          <p class="eyebrow eyebrow--outline">Ons aanbod</p>
+          <h2 class="section-title section-title--center"><span class="gold">Vijf manieren</span> om bij ons te trainen</h2>
+        </div>
+
+        <div class="offer__tabs" role="tablist" aria-label="Trainingsvormen">
+          <button class="tab is-active" role="tab" aria-selected="true" data-index="0">Personal Training</button>
+          <button class="tab" role="tab" aria-selected="false" data-index="1">Small Group Coaching</button>
+          <button class="tab" role="tab" aria-selected="false" data-index="2">Duo Personal Training</button>
+          <button class="tab" role="tab" aria-selected="false" data-index="3">Training aan Huis</button>
+        </div>
+      </div>
+
+      <div class="offer__viewport">
+        <div class="offer__track" id="offerTrack">
+          <article class="offer-slide">
+            <div class="offer-slide__media"><img src="assets/offer-1.jpg" alt="Personal training in de studio" loading="lazy" /></div>
+            <div class="offer-slide__card">
+              <h3 class="offer-slide__title">Personal Training</h3>
+              <p class="offer-slide__text">Op basis van de intake stellen we een schema op dat bij je niveau past. Als je vraagt om voedingsadvies of leefstijlbegeleiding nemen we dat hierin mee.</p>
+              <div class="offer-slide__actions">
+                <a class="btn btn--white" href="gratis-intake.html">Plan gratis intake</a>
+                <a class="link-underline" href="dienst.html?s=personal-training">Lees meer</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="offer-slide">
+            <div class="offer-slide__media"><img src="assets/offer-2.jpg" alt="Small group training in de studio" loading="lazy" /></div>
+            <div class="offer-slide__card">
+              <h3 class="offer-slide__title">Small Group Coaching</h3>
+              <p class="offer-slide__text">Je traint in een groep van maximaal zes, met een trainer die de hele training bij je blijft en je techniek per oefening corrigeert.</p>
+              <div class="offer-slide__actions">
+                <a class="btn btn--white" href="gratis-intake.html">Plan gratis intake</a>
+                <a class="link-underline" href="dienst.html?s=small-group-training">Lees meer</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="offer-slide">
+            <div class="offer-slide__media"><img src="assets/offer-3.jpg" alt="Duo personal training in de studio" loading="lazy" /></div>
+            <div class="offer-slide__card">
+              <h3 class="offer-slide__title">Duo Personal Training</h3>
+              <p class="offer-slide__text">Je traint samen met een partner op één schema, met dezelfde persoonlijke begeleiding als bij een individuele training.</p>
+              <div class="offer-slide__actions">
+                <a class="btn btn--white" href="gratis-intake.html">Plan gratis intake</a>
+                <a class="link-underline" href="dienst.html?s=duo-personal-training">Lees meer</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="offer-slide">
+            <div class="offer-slide__media"><img src="assets/offer-4.jpg" alt="Training aan huis" loading="lazy" /></div>
+            <div class="offer-slide__card">
+              <h3 class="offer-slide__title">Training aan Huis</h3>
+              <p class="offer-slide__text">We komen naar je toe met het materiaal dat bij je doel past, zodat je ook zonder studio met dezelfde begeleiding traint.</p>
+              <div class="offer-slide__actions">
+                <a class="btn btn--white" href="gratis-intake.html">Plan gratis intake</a>
+                <a class="link-underline" href="dienst.html?s=personal-training-aan-huis">Lees meer</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Onze studio -->
+    <section class="studio" aria-label="Onze studio">
+      <div class="studio__media">
+        <!-- Vervang met assets/studio.jpg -->
+        <img src="assets/studio.jpg" alt="Kleinschalige trainingsstudio in Spijkenisse" loading="lazy" />
+      </div>
+      <div class="container studio__inner">
+        <div class="studio__card">
+          <p class="eyebrow eyebrow--pill">Onze studio</p>
+          <h2 class="section-title"><span class="gold">Kleinschalige studio in</span> Spijkenisse</h2>
+          <p class="body-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ons team -->
+    <section class="team section" aria-label="Ons team">
+      <div class="container">
+        <div class="section-head section-head--center">
+          <p class="eyebrow eyebrow--pill">Ons team</p>
+          <h2 class="section-title section-title--center"><span class="gold">Het team</span> achter Maze Thales</h2>
+        </div>
+
+        <div class="team__grid">
+          <article class="team-card">
+            <div class="team-card__media"><img src="assets/team-1.jpg" alt="Masih, hoofdtrainer" loading="lazy" /></div>
+            <h3 class="team-card__name">Masih</h3>
+            <p class="team-card__role">Hoofdtrainer</p>
+            <a class="link-underline" href="#">Meer lezen</a>
+          </article>
+
+          <article class="team-card">
+            <div class="team-card__media"><img src="assets/team-2.jpg" alt="Masih, hoofdtrainer" loading="lazy" /></div>
+            <h3 class="team-card__name">Masih</h3>
+            <p class="team-card__role">Hoofdtrainer</p>
+            <a class="link-underline" href="#">Meer lezen</a>
+          </article>
+
+          <article class="team-card">
+            <div class="team-card__media"><img src="assets/team-3.jpg" alt="Masih, hoofdtrainer" loading="lazy" /></div>
+            <h3 class="team-card__name">Masih</h3>
+            <p class="team-card__role">Hoofdtrainer</p>
+            <a class="link-underline" href="#">Meer lezen</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reviews -->
+    <section class="reviews section" id="reviews" aria-label="Reviews">
+      <div class="container">
+        <div class="section-head section-head--center">
+          <p class="eyebrow eyebrow--pill">Reviews</p>
+          <h2 class="section-title section-title--center"><span class="gold">Wat klanten over ons</span> te zeggen hebben</h2>
+        </div>
+      </div>
+      <div class="marquee">
+        <div class="marquee__track" data-reviews></div>
+      </div>
+    </section>
+
+    <!-- FAQ + contact -->
+    <section class="faq section section--light" id="faq" aria-label="Veelgestelde vragen">
+      <div class="container faq__grid">
+        <div class="faq__head" id="contact">
+          <h2 class="section-title section-title--dark">Veelgestelde vragen</h2>
+          <p class="body-text body-text--dark">Staat je vraag er niet tussen? Neem contact met ons op.</p>
+        </div>
+
+        <div class="faq__contact">
+          <div class="contact-cards">
+            <a class="contact-card" href="tel:+31644992737">
+              <img class="tile-icon" src="assets/icons/telefoon.svg" alt="" aria-hidden="true" />
+              <span class="contact-card__body">
+                <span class="contact-card__label">Telefoon</span>
+                <span class="contact-card__value">06 44 99 27 37</span>
+              </span>
+            </a>
+            <a class="contact-card" href="mailto:mazethalesfs@gmail.com">
+              <img class="tile-icon" src="assets/icons/email.svg" alt="" aria-hidden="true" />
+              <span class="contact-card__body">
+                <span class="contact-card__label">E-mail</span>
+                <span class="contact-card__value">mazethalesfs@gmail.com</span>
+              </span>
+            </a>
+          </div>
+          <a class="btn btn--gold btn--lg" href="mailto:mazethalesfs@gmail.com">Contact opnemen</a>
+        </div>
+
+        <div class="faq__list">
+          <div class="accordion is-open">
+            <button class="accordion__head" aria-expanded="true">
+              <span class="accordion__q">Ik heb al jaren niet gesport. Is dit dan wel iets voor mij?</span>
+              <span class="accordion__toggle" aria-hidden="true"></span>
+            </button>
+            <div class="accordion__panel">
+              <p class="body-text body-text--dark">Dat is de situatie waar we het vaakst mee te maken hebben. We beginnen bij wat je lichaam nu aankan en bouwen op in een tempo dat je ook over een half jaar nog volhoudt.</p>
+            </div>
+          </div>
+
+          <div class="accordion">
+            <button class="accordion__head" aria-expanded="false">
+              <span class="accordion__q">Wat gebeurt er tijdens de gratis intake?</span>
+              <span class="accordion__toggle" aria-hidden="true"></span>
+            </button>
+            <div class="accordion__panel">
+              <p class="body-text body-text--dark">In een half uur nemen we je doel door, kijken we naar je huidige conditie en vertellen we eerlijk welke aanpak bij je past. Als dat wij niet zijn, zeggen we dat ook.</p>
+            </div>
+          </div>
+
+          <div class="accordion">
+            <button class="accordion__head" aria-expanded="false">
+              <span class="accordion__q">Kan ik het tempo van small group training bijhouden?</span>
+              <span class="accordion__toggle" aria-hidden="true"></span>
+            </button>
+            <div class="accordion__panel">
+              <p class="body-text body-text--dark">Iedereen in de groep werkt op zijn eigen niveau, omdat de trainer de oefeningen per persoon aanpast en de belasting mee laat groeien met wat je aankan.</p>
+            </div>
+          </div>
+
+          <div class="accordion">
+            <button class="accordion__head" aria-expanded="false">
+              <span class="accordion__q">Hoe lang zit ik vast aan een traject?</span>
+              <span class="accordion__toggle" aria-hidden="true"></span>
+            </button>
+            <div class="accordion__panel">
+              <p class="body-text body-text--dark">We werken met termijnen die je vooraf helder krijgt, zodat je precies weet waar je aan toe bent voordat je begint en er geen verrassingen achteraf zijn.</p>
+            </div>
+          </div>
+
+          <div class="accordion">
+            <button class="accordion__head" aria-expanded="false">
+              <span class="accordion__q">Trainen jullie ook bij mij thuis of buiten?</span>
+              <span class="accordion__toggle" aria-hidden="true"></span>
+            </button>
+            <div class="accordion__panel">
+              <p class="body-text body-text--dark">Naast de studio bieden we ook personal training aan huis aan, met dezelfde begeleiding en hetzelfde persoonlijke schema als in de zaal.</p>
+            </div>
+          </div>
+
+          <div class="accordion">
+            <button class="accordion__head" aria-expanded="false">
+              <span class="accordion__q">Krijg ik ook advies over voeding?</span>
+              <span class="accordion__toggle" aria-hidden="true"></span>
+            </button>
+            <div class="accordion__panel">
+              <p class="body-text body-text--dark">Als je daar behoefte aan hebt nemen we voedingsadvies mee in je plan, afgestemd op je doel en op wat realistisch in je dag past.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Eind-CTA -->
+    <section class="cta section" aria-label="Begin met een gratis intake">
+      <div class="container">
+        <div class="cta__card">
+          <div class="cta__media">
+            <!-- Vervang met assets/cta.jpg -->
+            <img src="assets/cta.jpg" alt="Trainingsvloer van de studio" loading="lazy" />
+          </div>
+
+          <div class="cta__body">
+            <div class="cta__lead">
+              <div class="review-badge review-badge--bare">
+                <div class="review-badge__avatars" aria-hidden="true">
+                  <span class="avatar"></span><span class="avatar"></span><span class="avatar"></span><span class="avatar"></span>
+                </div>
+                <div class="review-badge__meta">
+                  <div class="stars stars--gold" role="img" aria-label="5 uit 5 sterren"><span></span><span></span><span></span><span></span><span></span></div>
+                  <p class="review-badge__label">Gebaseerd op 432+ reviews</p>
+                </div>
+              </div>
+              <h2 class="section-title">Begin met een gratis intake</h2>
+            </div>
+
+            <div class="cta__action">
+              <p class="body-text">In een half uur nemen we je doel door, kijken we naar je huidige conditie en vertellen we eerlijk welke aanpak bij je past. Als dat wij niet zijn, zeggen we dat ook.</p>
+              <a class="btn btn--gold btn--lg btn--icon" href="gratis-intake.html">Plan gratis intake
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <ul class="cta__checks">
+            <li><span class="check" aria-hidden="true"></span>Maximaal zes per training</li>
+            <li><span class="check" aria-hidden="true"></span>Altijd een trainer erbij</li>
+            <li><span class="check" aria-hidden="true"></span>Vaste meetmomenten</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer-slot"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/SplitText.min.js"></script>
+  <script src="assets/partials.js"></script>
+  <script src="assets/reviews.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

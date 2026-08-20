@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tarieven — Maze Thales</title>
+  <meta name="description" content="Heldere tarieven voor begeleide personal training in Spijkenisse. Bij elk traject horen een intake, een plan, metingen, materiaal en contact tussendoor. Geen verrassingen achteraf." />
+  <link rel="stylesheet" href="https://use.typekit.net/hkj4cls.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Preloader (moet in de head laden, vóór de body-inhoud) -->
+  <script src="assets/preloader.js"></script>
+</head>
+<body data-page="tarieven">
+  <a class="skip-link" href="#main">Direct naar de inhoud</a>
+  <div id="site-header-slot"></div>
+
+  <main id="main">
+    <section class="page-hero" aria-label="Tarieven">
+      <div class="container">
+        <div class="page-hero__inner">
+          <p class="eyebrow eyebrow--pill">Tarieven</p>
+          <h1 class="page-hero__title">Wat begeleid trainen bij ons kost</h1>
+          <p class="page-hero__lead">Bij elke training staat een trainer bij je op de vloer en stellen we je plan elke acht weken bij. De prijs die je hieronder ziet is de prijs voor die begeleiding, zonder losse pakketten die er stiekem bijkomen.</p>
+        </div>
+      </div>
+    </section>
+
+    <nav class="breadcrumb" aria-label="Kruimelpad">
+      <div class="container"><ol><li><a href="index.html">Home</a></li><li aria-current="page">Tarieven</li></ol></div>
+    </nav>
+
+    <!-- Tarieven -->
+    <section class="section" aria-label="Tarieven">
+      <div class="container">
+        <div class="section-head section-head--center">
+          <p class="eyebrow eyebrow--pill">Diensten en prijzen</p>
+          <h2 class="section-title section-title--center">Onze tarieven op een rij</h2>
+        </div>
+        <div class="price-toggle" id="priceToggle" role="tablist" aria-label="Kies je optie">
+          <button class="price-toggle__btn is-active" type="button" role="tab" aria-selected="true" data-plan="c-6">6 maanden</button>
+          <button class="price-toggle__btn" type="button" role="tab" aria-selected="false" data-plan="c-12">12 maanden</button>
+          <button class="price-toggle__btn" type="button" role="tab" aria-selected="false" data-plan="c-losse">Losse les</button>
+        </div>
+        <div class="compare glass glass--pad" id="priceTable" data-plan="c-6">
+          <table>
+            <thead>
+              <tr>
+                <th class="c-dienst">Dienst</th>
+                <th class="c-6">6 maanden<span class="t-sub">per 4 weken</span></th>
+                <th class="c-12">12 maanden<span class="t-sub">per 4 weken</span></th>
+                <th class="c-losse">Losse les</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><th class="c-dienst">Small Group Coaching<span class="t-sub">1x per week, max 6 personen</span></th><td class="c-6"><span class="t-price">€ 100</span></td><td class="c-12"><span class="t-price">€ 90</span></td><td class="c-losse">—</td></tr>
+              <tr><th class="c-dienst">Small Group Coaching<span class="t-sub">2x per week, max 6 personen</span></th><td class="c-6"><span class="t-price">€ 200</span></td><td class="c-12"><span class="t-price">€ 180</span></td><td class="c-losse">—</td></tr>
+              <tr><th class="c-dienst">Personal Training<span class="t-sub">1-op-1, volledig op maat</span></th><td class="c-6"><span class="t-price">€ 240</span></td><td class="c-12"><span class="t-price">€ 220</span></td><td class="c-losse"><span class="t-price">€ 65</span><span class="t-sub">per les</span></td></tr>
+              <tr><th class="c-dienst">Duo Personal Training<span class="t-sub">samen, per persoon</span></th><td class="c-6"><span class="t-price">€ 130</span><span class="t-sub">per persoon</span></td><td class="c-12"><span class="t-price">€ 120</span><span class="t-sub">per persoon</span></td><td class="c-losse"><span class="t-price">€ 35</span><span class="t-sub">per persoon</span></td></tr>
+              <tr><th class="c-dienst">Personal Training aan Huis<span class="t-sub">op jouw locatie</span></th><td class="c-6"><span class="t-price">€ 320</span></td><td class="c-12"><span class="t-price">€ 300</span></td><td class="c-losse"><span class="t-price">€ 85</span><span class="t-sub">per les</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="body-text body-text--center u-mt-16">De vaste tarieven zijn per 4 weken bij een traject van 6 of 12 maanden. Losse lessen reken je per sessie af. In de gratis intake maken we samen concreet wat bij je past.</p>
+      </div>
+    </section>
+
+    <!-- Losse opties -->
+    <section class="section section--dark" aria-label="Losse opties">
+      <div class="container">
+        <div class="section-head section-head--center">
+          <p class="eyebrow eyebrow--pill">Goed om te weten</p>
+          <h2 class="section-title section-title--center">Naast de vaste trajecten</h2>
+        </div>
+        <div class="usp__grid">
+          <article class="feature-card"><h3 class="feature-card__title">Losse les</h3><p class="feature-card__text">Liever zonder traject trainen? Personal training kan per losse les vanaf € 65, aan huis vanaf € 85 en duo vanaf € 35 per persoon.</p></article>
+          <article class="feature-card"><h3 class="feature-card__title">Voedingsbegeleiding</h3><p class="feature-card__text">Een voedingsschema op maat, los of als aanvulling op je traject. Op aanvraag, afgestemd op je doel.</p></article>
+          <article class="feature-card"><h3 class="feature-card__title">Geen verrassingen</h3><p class="feature-card__text">De intake en proeftraining zijn gratis en vrijblijvend, zonder inschrijfgeld of verborgen kosten.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Wat inbegrepen -->
+    <section class="section" aria-label="Inbegrepen">
+      <div class="container">
+        <div class="section-head section-head--center">
+          <p class="eyebrow eyebrow--pill">Bij elk traject</p>
+          <h2 class="section-title section-title--center">Wat er altijd bij zit</h2>
+        </div>
+        <div class="included glass">
+          <div class="included__item"><img class="tile-icon" src="assets/icons/contact.svg" alt="" aria-hidden="true" /><p>Intake en doelbepaling</p></div>
+          <div class="included__item"><img class="tile-icon" src="assets/icons/schema.svg" alt="" aria-hidden="true" /><p>Persoonlijk plan</p></div>
+          <div class="included__item"><img class="tile-icon" src="assets/icons/meetmomenten.svg" alt="" aria-hidden="true" /><p>Metingen elke 8 weken</p></div>
+          <div class="included__item"><img class="tile-icon" src="assets/icons/trainer-bij.svg" alt="" aria-hidden="true" /><p>Materiaal aanwezig</p></div>
+          <div class="included__item"><img class="tile-icon" src="assets/icons/whatsapp.svg" alt="" aria-hidden="true" /><p>Contact via de app</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bezwaren -->
+    <section class="section section--light" aria-label="Vragen over geld">
+      <div class="container">
+        <div class="section-head section-head--center">
+          <p class="eyebrow eyebrow--soft">Goed om te weten</p>
+          <h2 class="section-title section-title--center section-title--dark">Vragen die met geld te maken hebben</h2>
+        </div>
+        <div class="faq__list u-narrow-wide">
+          <div class="accordion is-open">
+            <button class="accordion__head" aria-expanded="true"><span class="accordion__q">Zit ik vast aan 6 of 12 maanden?</span><span class="accordion__toggle" aria-hidden="true"></span></button>
+            <div class="accordion__panel"><p class="body-text body-text--dark">Je kiest zelf voor een traject van 6 of 12 maanden, afgerekend per 4 weken. Het langere traject is per 4 weken voordeliger. De precieze voorwaarden leggen we in de intake vast, zodat je vooraf weet waar je aan toe bent.</p></div>
+          </div>
+          <div class="accordion">
+            <button class="accordion__head" aria-expanded="false"><span class="accordion__q">Kan ik tussentijds wisselen van pakket?</span><span class="accordion__toggle" aria-hidden="true"></span></button>
+            <div class="accordion__panel"><p class="body-text body-text--dark">Ja. Wil je vaker of juist minder vaak trainen, of overstappen van small group naar personal, dan passen we dat in overleg aan.</p></div>
+          </div>
+          <div class="accordion">
+            <button class="accordion__head" aria-expanded="false"><span class="accordion__q">Wat gebeurt er met gemiste trainingen?</span><span class="accordion__toggle" aria-hidden="true"></span></button>
+            <div class="accordion__panel"><p class="body-text body-text--dark">Afspraken die je op tijd afzegt kun je in overleg inhalen. De regels hierover krijg je vooraf helder, zodat je niet betaalt voor iets wat je niet gebruikt.</p></div>
+          </div>
+          <div class="accordion">
+            <button class="accordion__head" aria-expanded="false"><span class="accordion__q">Hoe werkt het betalen?</span><span class="accordion__toggle" aria-hidden="true"></span></button>
+            <div class="accordion__panel"><p class="body-text body-text--dark">De vaste trajecten reken je per 4 weken af. Losse lessen betaal je per sessie. In de intake maken we het bedrag concreet, zonder inschrijfgeld of verborgen kosten.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slot CTA -->
+    <section class="approach section" aria-label="Gratis intake">
+      <div class="container">
+        <div class="section-head section-head--center">
+          <p class="eyebrow eyebrow--pill">Gratis intake</p>
+          <h2 class="section-title section-title--center">De intake is gratis en vrijblijvend</h2>
+          <p class="body-text body-text--center">Je zit nergens aan vast. We bepalen samen de frequentie die bij je past en maken de prijs concreet.</p>
+        </div>
+        <div class="approach__footer"><a class="btn btn--gold btn--lg" href="gratis-intake.html">Plan gratis intake</a></div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer-slot"></div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/SplitText.min.js"></script>
+  <script src="assets/partials.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

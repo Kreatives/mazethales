@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gratis intake — Maze Thales</title>
+  <meta name="description" content="Plan een gratis en vrijblijvende intake bij Maze Thales in Spijkenisse. We nemen je doel door, meten je uitgangspunt en je traint een keer mee." />
+  <link rel="stylesheet" href="https://use.typekit.net/hkj4cls.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Preloader (moet in de head laden, vóór de body-inhoud) -->
+  <script src="assets/preloader.js"></script>
+</head>
+<body data-page="intake" class="landing">
+  <a class="skip-link" href="#intake-form">Direct naar het formulier</a>
+
+  <header class="landing-bar">
+    <div class="container landing-bar__inner">
+      <a class="brand" href="index.html" aria-label="Maze Thales home">
+        <img class="brand__logo" src="assets/logo.svg" alt="Maze Thales" width="150" height="22" />
+      </a>
+      <a class="link-plain" href="tel:+31644992737">06 44 99 27 37</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero met formulier -->
+    <section class="section intake-hero" aria-label="Gratis intake">
+      <div class="container intake-hero__grid">
+        <div>
+          <p class="eyebrow eyebrow--pill">Gratis en vrijblijvend</p>
+          <h1 class="page-hero__title">Begin met een gratis intake en proeftraining</h1>
+          <ul class="prose u-mt-16">
+            <li>Een half uur waarin we je doel en je agenda doornemen</li>
+            <li>We meten je uitgangspunt, zodat je later iets hebt om mee te vergelijken</li>
+            <li>Je traint een keer mee en ervaart hoe we werken</li>
+          </ul>
+          <p class="body-text">Er volgt geen verkoopgesprek waar je niet onderuit komt. Past onze aanpak niet bij je, dan zeggen we dat gewoon.</p>
+        </div>
+
+        <div class="glass glass--pad" id="intake-form">
+          <h2 class="feature-card__title u-mt-0">Plan je intake</h2>
+          <form class="form u-mt-16" name="intake" method="post" action="bedankt.html">
+            <div class="form__row"><label for="i-naam">Naam</label><input id="i-naam" name="naam" type="text" required autocomplete="name" placeholder="Je naam" /></div>
+            <div class="form__row"><label for="i-tel">Telefoon</label><input id="i-tel" name="telefoon" type="tel" required autocomplete="tel" placeholder="06 12 34 56 78" /></div>
+            <div class="form__row"><label for="i-mail">E-mail</label><input id="i-mail" name="email" type="email" required autocomplete="email" placeholder="jij@voorbeeld.nl" /></div>
+            <div class="form__row"><label for="i-doel">Je doel</label>
+              <select id="i-doel" name="doel">
+                <option value="">Kies je doel</option>
+                <option>Sterker en fitter worden</option>
+                <option>Afvallen en op gewicht blijven</option>
+                <option>Herstel na een blessure</option>
+                <option>Weer een vast ritme opbouwen</option>
+                <option>Anders</option>
+              </select>
+            </div>
+            <div class="form__row"><label for="i-dagdeel">Voorkeur dagdeel</label>
+              <select id="i-dagdeel" name="dagdeel">
+                <option value="">Kies een dagdeel</option>
+                <option>Ochtend</option>
+                <option>Middag</option>
+                <option>Avond</option>
+              </select>
+            </div>
+            <div class="form__row"><label for="i-blessure">Blessures of klachten (optioneel)</label><textarea id="i-blessure" name="blessures" placeholder="Kort waar we rekening mee moeten houden"></textarea></div>
+            <button class="btn btn--gold btn--lg" type="submit">Plan mijn gratis intake</button>
+            <p class="form__hint">We nemen binnen één werkdag contact op. Je gegevens gebruiken we alleen hiervoor.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Wat er gebeurt -->
+    <section class="section section--dark" aria-label="Wat er gebeurt tijdens de intake">
+      <div class="container">
+        <div class="section-head section-head--center">
+          <p class="eyebrow eyebrow--pill">De intake</p>
+          <h2 class="section-title section-title--center">Wat er tijdens de intake gebeurt</h2>
+        </div>
+        <div class="approach__grid">
+          <article class="step-card"><h3 class="step-card__title"><span class="step-card__num">01</span> Kennismaken</h3><p class="body-text">We maken kennis en je vertelt waar je nu staat en wat je wilt bereiken.</p></article>
+          <article class="step-card"><h3 class="step-card__title"><span class="step-card__num">02</span> Doel en gezondheid</h3><p class="body-text">We nemen je doel, je blessures en je agenda door, zodat het plan bij je leven past.</p></article>
+          <article class="step-card"><h3 class="step-card__title"><span class="step-card__num">03</span> Meting</h3><p class="body-text">We meten je uitgangspunt, zodat vooruitgang later zichtbaar wordt in plaats van een gevoel.</p></article>
+          <article class="step-card"><h3 class="step-card__title"><span class="step-card__num">04</span> Proeftraining</h3><p class="body-text">Je traint een keer mee of we doen een voorstel. Het geheel duurt ongeveer een half uur.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reviews + team -->
+    <section class="section" aria-label="Bij wie je aan tafel zit">
+      <div class="container">
+        <div class="split">
+          <div class="team-card">
+            <div class="team-card__media"><img src="assets/team-1.jpg" alt="Masih, hoofdtrainer" loading="lazy" /></div>
+            <h3 class="team-card__name">Masih</h3>
+            <p class="team-card__role">Hoofdtrainer</p>
+          </div>
+          <div>
+            <div class="section-head--left"><p class="eyebrow">Vertrouwd</p><h2 class="section-title">Bij wie je straks aan tafel zit</h2></div>
+            <div class="prose u-mt-16">
+              <p>Masih is hoofdtrainer en de vaste persoon bij wie je de intake doet. Hij traint al jaren mensen die eerder in een grote zaal afhaakten omdat er niemand meekeek, en werkt volgens één principe: techniek eerst, gewicht daarna.</p>
+              <p>Tijdens de intake neemt hij de tijd om je doel, je blessures en je agenda door te nemen, zodat het plan dat je meekrijgt ook past bij je leven buiten de studio. Geen verkooppraatje, maar een eerlijk beeld van wat bij je past en wat je van ons kunt verwachten.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Laatste twijfels -->
+    <section class="section section--light" aria-label="Vragen">
+      <div class="container">
+        <div class="section-head section-head--center"><p class="eyebrow eyebrow--soft">Nog twijfel?</p><h2 class="section-title section-title--center section-title--dark">Vier vragen die vaak nog spelen</h2></div>
+        <div class="faq__list u-narrow-wide">
+          <div class="accordion is-open"><button class="accordion__head" aria-expanded="true"><span class="accordion__q">Is de intake echt gratis?</span><span class="accordion__toggle" aria-hidden="true"></span></button><div class="accordion__panel"><p class="body-text body-text--dark">Ja, de intake en de proeftraining zijn gratis en vrijblijvend. Je zit nergens aan vast.</p></div></div>
+          <div class="accordion"><button class="accordion__head" aria-expanded="false"><span class="accordion__q">Moet ik meteen een pakket kiezen?</span><span class="accordion__toggle" aria-hidden="true"></span></button><div class="accordion__panel"><p class="body-text body-text--dark">Nee. We doen een voorstel, en je beslist daarna rustig of je wilt beginnen.</p></div></div>
+          <div class="accordion"><button class="accordion__head" aria-expanded="false"><span class="accordion__q">Ik heb lang niet gesport, kan ik meedoen?</span><span class="accordion__toggle" aria-hidden="true"></span></button><div class="accordion__panel"><p class="body-text body-text--dark">Juist dan. We beginnen bij wat je nu aankan en bouwen op in een tempo dat je volhoudt.</p></div></div>
+          <div class="accordion"><button class="accordion__head" aria-expanded="false"><span class="accordion__q">Hoe snel kan ik terecht?</span><span class="accordion__toggle" aria-hidden="true"></span></button><div class="accordion__panel"><p class="body-text body-text--dark">Meestal binnen een week. Na je aanvraag nemen we binnen één werkdag contact op om een moment te plannen.</p></div></div>
+        </div>
+        <div class="approach__footer"><a class="btn btn--gold btn--lg" href="#intake-form">Naar het formulier</a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="landing-footer">
+    <div class="container landing-footer__inner">
+      <p>© <span data-year></span> Maze Thales</p>
+      <div class="site-footer__legal">
+        <a href="privacyverklaring.html">Privacyverklaring</a>
+        <a href="algemene-voorwaarden.html">Algemene voorwaarden</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/SplitText.min.js"></script>
+  <script src="assets/partials.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

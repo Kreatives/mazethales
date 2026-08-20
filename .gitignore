@@ -1,0 +1,7 @@
+# Originele foto's (te groot voor GitHub; de site gebruikt de geoptimaliseerde versies in assets/)
+Foto_s/
+
+# OS / editor
+.DS_Store
+**/.DS_Store
+Thumbs.db

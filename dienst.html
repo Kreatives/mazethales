@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dienst — Maze Thales</title>
+  <meta name="description" content="Begeleide training bij Maze Thales in Spijkenisse, altijd op afspraak en met techniekcorrectie. Bekijk voor wie deze vorm bedoeld is, hoe een sessie verloopt en wat het kost." />
+  <link rel="stylesheet" href="https://use.typekit.net/hkj4cls.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Preloader (moet in de head laden, vóór de body-inhoud) -->
+  <script src="assets/preloader.js"></script>
+</head>
+<body data-page="diensten">
+  <a class="skip-link" href="#main">Direct naar de inhoud</a>
+  <div id="site-header-slot"></div>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="page-hero page-hero--media" aria-label="Dienst">
+      <div class="page-hero__media"><img id="d-hero-img" src="assets/offer-1.jpg" alt="" loading="eager" /></div>
+      <div class="container">
+        <div class="page-hero__inner">
+          <p class="eyebrow eyebrow--pill">Diensten</p>
+          <h1 class="page-hero__title" id="d-name">Personal Training</h1>
+          <p class="page-hero__lead" id="d-forwhom"></p>
+          <div class="page-hero__actions">
+            <a class="btn btn--gold btn--lg" href="gratis-intake.html">Plan gratis intake</a>
+            <span class="link-plain" id="d-pricefrom"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <nav class="breadcrumb" aria-label="Kruimelpad">
+      <div class="container"><ol><li><a href="index.html">Home</a></li><li><a href="diensten.html">Diensten</a></li><li aria-current="page" id="d-crumb">Dienst</li></ol></div>
+    </nav>
+
+    <!-- Voor wie -->
+    <section class="section" aria-label="Voor wie">
+      <div class="container">
+        <div class="split">
+          <div class="section-head--left">
+            <p class="eyebrow">Voor wie</p>
+            <h2 class="section-title">Is dit iets voor jou?</h2>
+            <p class="body-text" id="d-alt"></p>
+          </div>
+          <ul class="prose" id="d-situations"></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hoe een sessie eruitziet -->
+    <section class="section section--dark" aria-label="Hoe een sessie verloopt">
+      <div class="container">
+        <div class="split">
+          <div>
+            <div class="section-head section-head--left">
+              <p class="eyebrow eyebrow--pill">Een sessie</p>
+              <h2 class="section-title">Hoe een training eruitziet</h2>
+            </div>
+            <div class="prose">
+              <p id="d-flow"></p>
+              <p>Meenemen: sportkleding en een handdoek.</p>
+            </div>
+          </div>
+          <div class="split__media"><img id="d-flow-img" src="assets/offer-1.jpg" alt="" loading="lazy" /></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Wat je krijgt -->
+    <section class="section" aria-label="Wat je krijgt">
+      <div class="container">
+        <div class="section-head section-head--center">
+          <p class="eyebrow eyebrow--pill">Inbegrepen</p>
+          <h2 class="section-title section-title--center">Wat je krijgt</h2>
+        </div>
+        <ul class="get-grid" id="d-get"></ul>
+      </div>
+    </section>
+
+    <!-- Prijzen -->
+    <section class="section section--dark" aria-label="Prijzen">
+      <div class="container">
+        <div class="section-head section-head--center">
+          <p class="eyebrow eyebrow--pill">Prijzen</p>
+          <h2 class="section-title section-title--center">Kies je traject</h2>
+        </div>
+        <div class="pricing" id="d-freq"></div>
+        <p class="body-text body-text--center u-mt-16">Vaste trajecten zijn per 4 weken bij 6 of 12 maanden. Alle tarieven staan overzichtelijk op de <a class="link-underline" href="tarieven.html">tarievenpagina</a>.</p>
+      </div>
+    </section>
+
+    <!-- Klantverhalen -->
+    <section class="section" aria-label="Ervaringen">
+      <div class="container">
+        <div class="section-head section-head--center">
+          <p class="eyebrow eyebrow--pill">Ervaring</p>
+          <h2 class="section-title section-title--center">Wat klanten zeggen</h2>
+        </div>
+      </div>
+      <div class="marquee">
+        <div class="marquee__track" data-reviews></div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section section--light" aria-label="Veelgestelde vragen">
+      <div class="container">
+        <div class="section-head section-head--center">
+          <p class="eyebrow eyebrow--soft">Vragen</p>
+          <h2 class="section-title section-title--center section-title--dark">Vragen over deze vorm</h2>
+        </div>
+        <div class="faq__list u-narrow-wide" id="d-faqs"></div>
+      </div>
+    </section>
+
+    <!-- Slot CTA -->
+    <section class="approach section" aria-label="Gratis intake">
+      <div class="container">
+        <div class="section-head section-head--center">
+          <p class="eyebrow eyebrow--pill">Gratis intake</p>
+          <h2 class="section-title section-title--center">Probeer het met een gratis intake</h2>
+          <p class="body-text body-text--center">Vrijblijvend kennismaken, je doel doornemen en ervaren hoe we werken.</p>
+        </div>
+        <div class="approach__footer"><a class="btn btn--gold btn--lg" href="gratis-intake.html">Plan gratis intake</a></div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer-slot"></div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/SplitText.min.js"></script>
+  <script src="assets/partials.js"></script>
+  <script src="assets/diensten-data.js"></script>
+  <script src="assets/reviews.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
