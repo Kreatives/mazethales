@@ -48,54 +48,71 @@
       </div>
     </section>
 
-    <!-- Vier diensten -->
-    <section class="section section--dark" aria-label="Alle diensten">
+    <!-- Ons aanbod (zelfde slider als de homepage) -->
+    <section class="offer section section--light" aria-label="Ons aanbod">
       <div class="container">
         <div class="section-head section-head--center">
-          <p class="eyebrow eyebrow--pill">Ons aanbod</p>
+          <p class="eyebrow eyebrow--outline">Ons aanbod</p>
           <h2 class="section-title section-title--center">De trainingsvormen op een rij</h2>
         </div>
-        <div class="service-grid">
-          <article class="service-card2">
-            <div class="service-card2__media"><img src="assets/offer-1.jpg" alt="Personal training in de studio" loading="lazy" /></div>
-            <div class="service-card2__body">
-              <h3 class="service-card2__title">Personal Training</h3>
-              <p class="body-text u-mt-0">Eén op één met je eigen trainer, volledig gericht op jouw doel en tempo. De snelste weg naar resultaat.</p>
-              <div class="service-card2__meta"><span>Vanaf<b>€ 65 p/les</b></span><span>Groep<b>1 persoon</b></span></div>
-              <a class="link-underline" href="dienst.html?s=personal-training">Bekijk personal training</a>
+
+        <div class="offer__tabs" role="tablist" aria-label="Trainingsvormen">
+          <button class="tab is-active" role="tab" aria-selected="true" data-index="0">Personal Training</button>
+          <button class="tab" role="tab" aria-selected="false" data-index="1">Small Group Coaching</button>
+          <button class="tab" role="tab" aria-selected="false" data-index="2">Duo Personal Training</button>
+          <button class="tab" role="tab" aria-selected="false" data-index="3">Training aan Huis</button>
+        </div>
+      </div>
+
+      <div class="offer__viewport">
+        <div class="offer__track" id="offerTrack">
+          <article class="offer-slide">
+            <div class="offer-slide__media"><img src="assets/offer-1.jpg" alt="Personal training in de studio" loading="lazy" /></div>
+            <div class="offer-slide__card">
+              <h3 class="offer-slide__title">Personal Training</h3>
+              <p class="offer-slide__text">Eén op één met je eigen trainer, volledig gericht op jouw doel en tempo. De snelste weg naar resultaat.</p>
+              <div class="offer-slide__actions">
+                <a class="btn btn--white" href="gratis-intake.html">Plan gratis intake</a>
+                <a class="link-underline" href="dienst.html?s=personal-training">Lees meer</a>
+              </div>
             </div>
           </article>
 
-          <article class="service-card2">
-            <div class="service-card2__media"><img src="assets/offer-3.jpg" alt="Duo personal training" loading="lazy" /></div>
-            <div class="service-card2__body">
-              <h3 class="service-card2__title">Duo Personal Training</h3>
-              <p class="body-text u-mt-0">Samen met een partner op één schema, met dezelfde persoonlijke begeleiding.</p>
-              <div class="service-card2__meta"><span>Vanaf<b>€ 35 p.p.</b></span><span>Groep<b>2 personen</b></span></div>
-              <a class="link-underline" href="dienst.html?s=duo-personal-training">Bekijk duo training</a>
+          <article class="offer-slide">
+            <div class="offer-slide__media"><img src="assets/offer-2.jpg" alt="Small group coaching in de studio" loading="lazy" /></div>
+            <div class="offer-slide__card">
+              <h3 class="offer-slide__title">Small Group Coaching</h3>
+              <p class="offer-slide__text">Je traint in een groep van maximaal zes, met een trainer die de hele training bij je blijft en je techniek per oefening corrigeert.</p>
+              <div class="offer-slide__actions">
+                <a class="btn btn--white" href="gratis-intake.html">Plan gratis intake</a>
+                <a class="link-underline" href="dienst.html?s=small-group-training">Lees meer</a>
+              </div>
             </div>
           </article>
 
-          <article class="service-card2">
-            <div class="service-card2__media"><img src="assets/offer-2.jpg" alt="Small group training" loading="lazy" /></div>
-            <div class="service-card2__body">
-              <h3 class="service-card2__title">Small Group Coaching</h3>
-              <p class="body-text u-mt-0">Begeleiding in een groep van maximaal zes, met techniekcorrectie per persoon.</p>
-              <div class="service-card2__meta"><span>Vanaf<b>€ 90 /4 wk</b></span><span>Groep<b>Max 6</b></span></div>
-              <a class="link-underline" href="dienst.html?s=small-group-training">Bekijk small group</a>
+          <article class="offer-slide">
+            <div class="offer-slide__media"><img src="assets/offer-3.jpg" alt="Duo personal training in de studio" loading="lazy" /></div>
+            <div class="offer-slide__card">
+              <h3 class="offer-slide__title">Duo Personal Training</h3>
+              <p class="offer-slide__text">Je traint samen met een partner op één schema, met dezelfde persoonlijke begeleiding als bij een individuele training.</p>
+              <div class="offer-slide__actions">
+                <a class="btn btn--white" href="gratis-intake.html">Plan gratis intake</a>
+                <a class="link-underline" href="dienst.html?s=duo-personal-training">Lees meer</a>
+              </div>
             </div>
           </article>
 
-          <article class="service-card2">
-            <div class="service-card2__media"><img src="assets/offer-4.jpg" alt="Training aan huis" loading="lazy" /></div>
-            <div class="service-card2__body">
-              <h3 class="service-card2__title">Training aan Huis</h3>
-              <p class="body-text u-mt-0">We komen naar je toe met het materiaal dat bij je doel past, met dezelfde begeleiding.</p>
-              <div class="service-card2__meta"><span>Vanaf<b>€ 85 p/les</b></span><span>Groep<b>1 persoon</b></span></div>
-              <a class="link-underline" href="dienst.html?s=personal-training-aan-huis">Bekijk aan huis</a>
+          <article class="offer-slide">
+            <div class="offer-slide__media"><img src="assets/offer-4.jpg" alt="Training aan huis" loading="lazy" /></div>
+            <div class="offer-slide__card">
+              <h3 class="offer-slide__title">Training aan Huis</h3>
+              <p class="offer-slide__text">We komen naar je toe met het materiaal dat bij je doel past, zodat je ook zonder studio met dezelfde begeleiding traint.</p>
+              <div class="offer-slide__actions">
+                <a class="btn btn--white" href="gratis-intake.html">Plan gratis intake</a>
+                <a class="link-underline" href="dienst.html?s=personal-training-aan-huis">Lees meer</a>
+              </div>
             </div>
           </article>
-
         </div>
       </div>
     </section>

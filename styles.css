@@ -951,11 +951,15 @@ button { font-family: inherit; cursor: pointer; }
   color: var(--gold);
 }
 .contact-card__value {
-  font-family: var(--ff-wide);
-  font-weight: 500;
-  font-size: 1.125rem;
+  font-family: var(--ff-base);
+  font-weight: 600;
+  font-size: 1rem;
   color: var(--white);
   margin-top: 4px;
+  overflow-wrap: anywhere;
+}
+@media (max-width: 768px) {
+  .contact-card__value { font-size: 0.9rem; }
 }
 
 .faq__list { display: flex; flex-direction: column; gap: 16px; }
@@ -1478,9 +1482,9 @@ button { font-family: inherit; cursor: pointer; }
 .included {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 20px;
+  column-gap: 20px;
+  row-gap: clamp(32px, 4vw, 48px);
   margin-top: 48px;
-  padding: 32px;
 }
 .included__item { text-align: center; }
 .included__item .icon-tile { margin: 0 auto 14px; }
@@ -1719,7 +1723,10 @@ button { font-family: inherit; cursor: pointer; }
   .site-header.nav-open .main-nav__link,
   .site-header.nav-open .nav-dropdown { width: 100%; }
   .nav-toggle { display: flex; }
-  .home .site-header:not(.is-stuck) { background: rgba(17,17,17,0.35); backdrop-filter: blur(6px); }
+  /* Header op mobiel altijd bovenaan geplakt en solide (ook op de homepage) */
+  .site-header, .home .site-header { position: sticky; top: 0; }
+  .home .site-header { background: rgba(17,17,17,0.98); backdrop-filter: blur(10px); box-shadow: 0 1px 0 var(--line-dark); }
+  .home .topbar { position: relative; }
   /* Dropdown wordt inline lijst in mobiel menu */
   .nav-dropdown .dropdown {
     position: static;
@@ -1747,7 +1754,8 @@ button { font-family: inherit; cursor: pointer; }
   .team-card__name { font-size: 1.05rem; }
   .team-card__role { font-size: 0.85rem; }
   .review-card { flex-basis: 100%; }
-  .hero { padding-top: 168px; }
+  .hero { padding-top: 40px; }
+  .hero__title { font-size: clamp(1.05rem, 0.8rem + 2vw, 1.7rem); letter-spacing: -0.03em; }
   .hero__stats { flex-wrap: wrap; gap: 24px 32px; }
   .cta__checks { flex-direction: column; align-items: flex-start; }
   .site-footer__top { grid-template-columns: 1fr; gap: 32px; }
@@ -1758,7 +1766,7 @@ button { font-family: inherit; cursor: pointer; }
   .service-card2--wide { flex-direction: column; }
   .service-card2--wide .service-card2__media { flex-basis: auto; aspect-ratio: 16 / 10; }
   .get-grid { grid-template-columns: 1fr; }
-  .included { grid-template-columns: repeat(2, 1fr); gap: 14px; padding: 24px; }
+  .included { grid-template-columns: repeat(2, 1fr); column-gap: 16px; row-gap: 34px; padding: 0; }
   .included__item .tile-icon { width: 50px; height: 50px; }
   .included__item:last-child:nth-child(odd) { grid-column: 1 / -1; }
   .article-grid { grid-template-columns: 1fr; }
@@ -1868,7 +1876,12 @@ button { font-family: inherit; cursor: pointer; }
   flex-direction: column;
   align-items: flex-end;
   gap: 14px;
+  /* Container zelf vangt geen clicks; alleen de knop en (open) paneel wel,
+     anders blokkeert het onzichtbare paneel taps op de rest van de pagina */
+  pointer-events: none;
 }
+.contact-fab__toggle { pointer-events: auto; }
+.contact-fab.is-open .contact-fab__panel { pointer-events: auto; }
 
 /* Avatar met groene status-dot */
 .contact-fab__avatar { position: relative; width: 46px; height: 46px; flex-shrink: 0; }
@@ -1964,9 +1977,8 @@ button { font-family: inherit; cursor: pointer; }
 .contact-fab.is-open .contact-fab__chev { transform: rotate(180deg); }
 
 @media (max-width: 480px) {
-  .contact-fab__toggle-label { display: none; }
-  .contact-fab__toggle { padding: 8px; }
-  .contact-fab__chev { display: none; }
+  .contact-fab__toggle-label { font-size: 0.85rem; }
+  .contact-fab { right: 12px; bottom: 12px; }
 }
 
 @media (prefers-reduced-motion: reduce) {

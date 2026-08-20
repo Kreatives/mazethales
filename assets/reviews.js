@@ -46,7 +46,10 @@
 
   document.querySelectorAll("[data-reviews]").forEach((track) => {
     track.innerHTML = html + dupe;
-    // Snelheid schaalt mee met het aantal kaarten zodat de leessnelheid gelijk blijft
-    track.style.animationDuration = REVIEWS.length * 6.5 + "s";
+    // Rustige, constante snelheid (~28px/s) ongeacht kaartbreedte of scherm
+    requestAnimationFrame(() => {
+      const half = track.scrollWidth / 2;
+      if (half > 0) track.style.animationDuration = Math.round(half / 28) + "s";
+    });
   });
 })();
