@@ -1723,9 +1723,17 @@ button { font-family: inherit; cursor: pointer; }
   .site-header.nav-open .main-nav__link,
   .site-header.nav-open .nav-dropdown { width: 100%; }
   .nav-toggle { display: flex; }
-  /* Header op mobiel altijd bovenaan geplakt en solide (ook op de homepage) */
-  .site-header, .home .site-header { position: sticky; top: 0; }
-  .home .site-header { background: rgba(17,17,17,0.98); backdrop-filter: blur(10px); box-shadow: 0 1px 0 var(--line-dark); }
+  /* Header op mobiel: altijd sticky en volledig solide (geen blur/transparantie),
+     ook in de is-stuck-state, anders flikkert het lelijk bij scrollen op iOS */
+  .site-header,
+  .home .site-header,
+  .home .site-header.is-stuck {
+    position: sticky;
+    top: 0;
+    background: var(--bg);
+    backdrop-filter: none;
+    box-shadow: 0 1px 0 var(--line-dark);
+  }
   .home .topbar { position: relative; }
   /* Dropdown wordt inline lijst in mobiel menu */
   .nav-dropdown .dropdown {
@@ -1838,7 +1846,8 @@ button { font-family: inherit; cursor: pointer; }
   .container { padding-inline: 18px; }
   .btn--lg { width: 100%; justify-content: center; }
   .page-hero__actions { flex-direction: column; align-items: stretch; }
-  .cta__card { padding: 0; }
+  .cta__card { padding: 24px; }
+  .cta__body { padding-bottom: 28px; }
 }
 
 /* Landingspagina (gratis intake) */
